@@ -1,8 +1,10 @@
-package com.if3b.quotes;
+package com.if3b.quotes.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.if3b.quotes.R;
 
 public class MainActivity extends AppCompatActivity {
 
