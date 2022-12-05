@@ -1,6 +1,8 @@
 package com.if3b.quotes.Adapter;
 
 
+import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -8,14 +10,28 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.if3b.quotes.Models.QuotesModel;
 import com.if3b.quotes.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class AdapterQuotes extends RecyclerView.Adapter<AdapterQuotes.ViewHolderQuotes>
 {
+    private List<QuotesModel> ListQuotes = new ArrayList<>();
+    private Context ctx;
+
+    public AdapterQuotes(List<QuotesModel> listQuotes, Context ctx) {
+        ListQuotes = listQuotes;
+        this.ctx = ctx;
+    }
+
     @NonNull
     @Override
     public ViewHolderQuotes onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        View varView = LayoutInflater.from(ctx).inflate(R.layout.item_quotes, parent, false);
+
+        return new ViewHolderQuotes(varView);
     }
 
     @Override
