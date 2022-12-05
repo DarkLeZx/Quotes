@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         pbQuotes = findViewById(R.id.pb_quotes);
 
         rvQuotes.setLayoutManager(new LinearLayoutManager(this));
+        retrieveQuotes();
     }
     private void retrieveQuotes()
     {

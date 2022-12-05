@@ -17,8 +17,7 @@
             android:layout_height="wrap_content"
             android:text="Qoutes"
             style="@style/TextAppearance.AppCompat.Medium"
-            android:justificationMode="inter_word"
-            android:textStyle="italic"/>
+            android:justificationMode="inter_word"/>
 
         <TextView
             android:id="@+id/tv_author"
