@@ -36,12 +36,14 @@ public class AdapterQuotes extends RecyclerView.Adapter<AdapterQuotes.ViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolderQuotes holder, int position) {
-
+    QuotesModel QM = ListQuotes.get(position);
+    holder.tvQuotes.setText(QM.getText());
+    holder.tvAuthor.setText(QM.getAuthor());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return ListQuotes.size();
     }
 
     public class ViewHolderQuotes extends RecyclerView.ViewHolder
